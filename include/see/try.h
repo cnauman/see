@@ -47,7 +47,7 @@
  * Determine which setjmp/longjmp interface to use
  */
 
-#if 1/*HAVE__LONGJMP*/
+#if 0/*HAVE__LONGJMP*/
 # include <setjmp.h>
 # define _SEE_LONGJMP(buf, val)	_longjmp(buf, val)
 # define _SEE_SETJMP(buf)	_setjmp(buf)
