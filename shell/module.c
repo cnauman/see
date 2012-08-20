@@ -29,6 +29,7 @@ int
 load_module(name)
 	const char *name;
 {
+#if 0
 	lt_dlhandle handle = NULL;
 	struct SEE_module *module;
 	char symname[256];
@@ -111,4 +112,7 @@ load_module(name)
 	if (handle) lt_dlclose(handle);
   	lt_dlexit();
 	return 0;
+#else
+        return 1;
+#endif
 }
